@@ -1,13 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Miresevini!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <h1>Mirsevini!</h1>
-    <p>Aplikacioni i pare i montuar ne Nginx Docker Container!</p>
-</body>
-</html>
+<?php
+        echo "Docker është magjik!"
+?>
