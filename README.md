@@ -1,10 +1,12 @@
-### How to deploy a static HTML website from scratch with Docker and Ngnix
-1. Create a directory for html page (ex. first-html-image)
+### How to deploy a PHP basic application scratch with Docker 
+1. Create a directory (ex. php-demo)
 2. Create Dockerfile in root 
     $touch Dockerfile
-   ```
-   FROM nginx:latest
-   COPY html-page /usr/share/nginx/html
+   ```yaml
+    FROM php:8.0-apache ## Pull the image from dockerhub
+    COPY index.php /var/www/html/index.php ## Copy file index.php to directory /var/www/html in image.
+    EXPOSE 80 ## Port 80 is exposed for apache.
+    CMD ["usr/sbin/apache2ctl", "-D", "FOREGROUND"] ## Apache started the containerka filluar.
    ```
 
 > These lines of code represent the image we're going to use along with copying the contents of the current directory into the container.
@@ -12,12 +14,13 @@
 ### How to build docker
 
 #### Build images
-`docker build --tag first-app:latest . `
+`docker build -t php-demo:latest . `
+
+#### Run container
+`docker run --name first-php-app -p 9090:80 -d first-app:latest`
+
 #### Show images
 `docker images ls'`
 
-#### Run container
-`docker run --name first-app -p 8080:80 -d first-app:latest`
-
 ### Test the Port with cURL
-`curl localhost:8080`
+`curl localhost:9090`
