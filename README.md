@@ -6,7 +6,7 @@
     FROM php:8.0-apache ## Pull the image from dockerhub
     COPY index.php /var/www/html/index.php ## Copy file index.php to directory /var/www/html in image.
     EXPOSE 80 ## Port 80 is exposed for apache.
-    CMD ["usr/sbin/apache2ctl", "-D", "FOREGROUND"] ## Apache started the containerka filluar.
+    CMD ["usr/sbin/apache2ctl", "-D", "FOREGROUND"] ## Apache started the container.
    ```
 
 > These lines of code represent the image we're going to use along with copying the contents of the current directory into the container.
