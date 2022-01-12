@@ -20,7 +20,7 @@
 `docker run --name first-php-app -p 9090:80 -d first-app:latest`
 
 #### Show images
-`docker images ls'`
+`docker images ls`
 
 ### Test the Port with cURL
 `curl localhost:9090`
