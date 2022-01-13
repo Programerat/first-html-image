@@ -3,7 +3,7 @@
 2. Create Dockerfile in root 
     $touch Dockerfile
    ```yaml
-    FROM php:8.0-apache ## Pull the image from dockerhub
+    FROM php:7.2-apache ## Pull the image from dockerhub
     COPY index.php /var/www/html/index.php ## Copy file index.php to directory /var/www/html in image.
     EXPOSE 80 ## Port 80 is exposed for apache.
     CMD ["usr/sbin/apache2ctl", "-D", "FOREGROUND"] ## Apache started the container.
